@@ -465,8 +465,8 @@ public:
       float duty;
       if (abs(period) > 1 && jointIndex < firstMotionJoint || abs(period) == 1 && jointIndex < 4 && manualHeadQ) {
         if (!manualHeadQ && jointIndex < 4) {
-          duty = (jointIndex != 1 ? offsetLR : 0)  //look left or right
-                 + 10 * sin(frame * (jointIndex + 2) * M_PI / abs(period));
+          duty = (jointIndex != 1 ? offsetLR : 0);  //look left or right
+                 //+ 10 * sin(frame * (jointIndex + 2) * M_PI / abs(period));
         } else {
           duty =
 #ifdef DAMPED_MOTION
