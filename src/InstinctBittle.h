@@ -227,11 +227,11 @@ const int8_t rc[] PROGMEM = {
    -8, -20, -11,   0,  -1,  -1,   0,   0,  18,  18,  18,  18, -14, -14, -14, -14,	16, 4, 0, 0,
     0,   0,   0,   0,   0,   0,   0,   0,  15,  15,  15,  15,  15,  15,  15,  15,	12, 2, 0, 0,
 };
-  const char* skillNameWithType[]={"bkI","vtLI","wkFI","wkLI","balanceI","buttUpI","calibI","restI","sitI","zeroN","jmpI",};
+  const char* skillNameWithType[]={"bkI","vtLI","wkFI","wkLI","balanceI","buttUpI","calibI","restI","sitI","zeroN", "collectI", "pher1LI", "pher2LI", "pher3LI", "pher1RI", "pher2RI", "pher3RI", "jmpI",};
 #if !defined(MAIN_SKETCH) || !defined(I2C_EEPROM)
 		//if it's not the main sketch to save data or there's no external EEPROM, 
 		//the list should always contain all information.
-  const int8_t* progmemPointer[] = {bk, vtL, wkF, wkL, balance, buttUp, calib, rest, sit, zero, jmp, rc,};
+  const int8_t* progmemPointer[] = {bk, vtL, wkF, wkL, balance, buttUp, calib, rest, sit, zero, collect, pher1L, pher2L, pher3L, pher1R, pher2R, pher3R, jmp, rc,};
 #else	//only need to know the pointers to newbilities, because the intuitions have been saved onto external EEPROM,
 	//while the newbilities on progmem are assigned to new addresses
   const int8_t* progmemPointer[] = {zero, };
