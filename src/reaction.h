@@ -242,7 +242,7 @@ void reaction() {
 #endif
         {
           if (token == T_INDEXED_SIMULTANEOUS_ASC && cmdLen == 0)
-            manualHeadQ = false;
+            manualHeadQ = true;
           else {
             int targetFrame[DOF];
             nonHeadJointQ = false;
@@ -353,7 +353,7 @@ void reaction() {
 #endif
         {                  //indexed joint motions: joint0, angle0, joint1, angle1, ... (binary encoding)
           if (cmdLen < 2)  //the terminator of upper-case tokens is not '\n'. it may cause error when entered in the Arduino serial monitor
-            manualHeadQ = false;
+            manualHeadQ = true;
           else {
             int targetFrame[DOF];
             nonHeadJointQ = false;
@@ -497,7 +497,7 @@ void reaction() {
           skill.loadFrame(newCmd);
           pwm.shutServos();
           gyroBalanceQ = false;
-          manualHeadQ = false;
+          manualHeadQ = true;
           PTL('g');
           break;
         }
